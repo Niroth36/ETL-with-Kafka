@@ -1,8 +1,8 @@
-- Extract Transform Load procedure
+# Extract Transform Load procedure
 
--- Technologies
-    --- mysql
-    --- neo4j
-    --- kafka
-    --- mongodb
-    --- flask
+## Technologies
+    - mysql
+    - neo4j
+    - kafka
+    - mongodb
+    - flask
