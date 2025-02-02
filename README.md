@@ -47,3 +47,7 @@ CREATE (a)-[:PARTNER]->(c);
 - Make checks
 MATCH (u:User) RETURN u;
 MATCH (u:User) WHERE 8 IN u.purchasedClothes RETURN u;
+
+- Create topics manually
+docker exec -it kafka bash
+kafka-topics --create --topic users-topic --bootstrap-server kafka:9092 --partitions 1 --replication-f
