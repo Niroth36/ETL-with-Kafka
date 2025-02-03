@@ -51,3 +51,19 @@ MATCH (u:User) WHERE 8 IN u.purchasedClothes RETURN u;
 - Create topics manually
 docker exec -it kafka bash
 kafka-topics --create --topic users-topic --bootstrap-server kafka:9092 --partitions 1 --replication-f
+
+
+- Example JSON Stored in MongoDB
+{
+  "userID": 1,
+  "userName": "Alice",
+  "email": "alice@example.com",
+  "connections": [
+    {"relationship": "FRIEND", "userID": 2, "name": "Bob"},
+    {"relationship": "PARTNER", "userID": 3, "name": "Charlie"}
+  ],
+  "purchasedClothes": [
+    {"clothID": 1, "style": "athletic", "color": "Red", "price": 49.99, "brand": "Nike"},
+    {"clothID": 2, "style": "casual", "color": "Blue", "price": 39.99, "brand": "Levis"}
+  ]
+}
